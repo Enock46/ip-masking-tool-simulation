@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Masking Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>IP Masking Results</h1>
+        {% if result %}
+            {% if result.success %}
+                <div class="result success">
+                    <p><strong>Status Code:</strong> {{ result.status_code }}</p>
+                    <p><strong>Response Headers:</strong></p>
+                    <pre>{{ result.headers }}</pre>
+                </div>
+            {% else %}
+                <div class="result error">
+                    <p><strong>Error:</strong> {{ result.error }}</p>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="result error">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+        <a href="/" class="back-button">Go Back</a>
+    </div>
+</body>
+</html>

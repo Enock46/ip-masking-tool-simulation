@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Masking Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Logo Section -->
+            <img src="{{ url_for('static', filename='imgs/masking.jpg') }}" alt="Masking Tool Logo" class="logo">
+            
+            <h1>IP Masking Simulation Tool</h1>
+        </div>
+        <form action="/mask_ip" method="POST">
+            <div class="form-group">
+                <label for="target_url">Target URL:</label>
+                <input type="url" id="target_url" name="target_url" placeholder="https://example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="proxy_ip">Proxy IP Address:</label>
+                <input type="text" id="proxy_ip" name="proxy_ip" placeholder="203.144.144.146" required>
+            </div>
+            <div class="form-group">
+                <label for="proxy_port">Proxy Port:</label>
+                <input type="number" id="proxy_port" name="proxy_port" placeholder="8080" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Mask IP</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

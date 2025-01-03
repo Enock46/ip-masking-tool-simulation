@@ -1,0 +1,182 @@
+/* Reset all default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #e1e1e1;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #2c2f38;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+/* Header styling - Flexbox for logo and title alignment */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adjust the gap between logo and title */
+    margin-bottom: 30px;
+}
+
+/* Logo styling */
+.logo {
+    width: 50px; /* Default logo size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 55%; /* Optional: make the logo round */
+}
+
+/* Header Title (h1) styling */
+h1 {
+    font-size: 2.5em;
+    color: #0fd1f7;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+/* Input styling */
+input {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 2px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #e1e1e1;
+}
+
+input:focus {
+    border-color: #0fd1f7;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    background-color: #0fd1f7;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0198a2;
+}
+
+/* Result section styling */
+.result {
+    margin-top: 40px;
+}
+
+.result.success {
+    background-color: #1c7c29;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.result.error {
+    background-color: #8b0000;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Preformatted text for headers and response */
+pre {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 6px;
+    color: #e1e1e1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    overflow-x: auto;
+}
+
+/* Link styling */
+a {
+    text-decoration: none;
+    color: #0fd1f7;
+    font-size: 1.2em;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0198a2;
+}
+
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #0fd1f7;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #0fd1f7;
+}
+
+.back-button:hover {
+    background-color: #0fd1f7;
+    color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .logo {
+        width: 40px; /* Smaller logo size on smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller title on smaller screens */
+    }
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+    .logo {
+        width: 70px; /* Larger logo on large screens */
+    }
+
+    h1 {
+        font-size: 3em; /* Larger title on large screens */
+    }
+}
